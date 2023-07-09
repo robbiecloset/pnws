@@ -1,7 +1,10 @@
 // /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const { withContentlayer } = require('next-contentlayer')
 
-module.exports = nextConfig
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
+};
 
-// const withTypescript = require('@zeit/next-typescript')
-// module.exports = withTypescript()
+module.exports = withContentlayer(nextConfig);

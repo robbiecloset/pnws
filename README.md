@@ -5,8 +5,8 @@ Please note that the foundation of this repository borrows heavily from [this aw
 ## Local development
 
 ```sh
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 ---
