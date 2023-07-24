@@ -1,8 +1,10 @@
 import './globals.css'
+// import { Nanum_Myeongjo } from 'next/font/google'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
+// const nanum = Nanum_Myeongjo({ weight: "700", subsets: ['latin'] })
 
 export default function RootLayout({
   children,
