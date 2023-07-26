@@ -1,0 +1,29 @@
+version: "3.9"
+
+x-base_config: &base_config
+  build:
+    context: .
+    dockerfile: ./Dockerfile.dev
+  # env_file:
+  #   - .env
+  image: pnws:dev
+  profiles:
+    - dev
+  networks:
+    - pnws
+  volumes:
+    - .:/mnt:cached
+    - pnws-node_modules:/mnt/node_modules
+
+services:
+  web:
+    <<: *base_config
+    command: pnpm run dev
+    ports:
+      - "3000:3000"
+
+networks:
+  pnws:
+
+volumes:
+  pnws-node_modules:
